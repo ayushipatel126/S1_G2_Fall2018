@@ -5,34 +5,61 @@
 <meta name="viewport" content="width=device-width, initial-scale=1">
 {% load  static %}
 <link rel="stylesheet" href="{% static 'css/w3.css' %}">
-<link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Raleway">
+<link rel="stylesheet" href="{% static 'css/fonts.css' %}">
+<link rel="stylesheet" href="{% static 'css/style.css' %}">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
 <style>
-body,h1 {font-family: "Raleway", sans-serif}
-body, html {height: 100%}
-.bgimg {
+    body, h1, h2, h3, h4, h5, h6 {
+        font-family: "Raleway", Arial, Helvetica, sans-serif
+    }
 
-    height: 100%;
-     min-width: 100%;
-    background-position: center;
-    background-size: cover;
-}
+    .myLink {
+        display: none
+    }
 </style>
-<body>
+<body class="w3-light-grey">
 
-<div class="bgimg w3-display-container w3-animate-opacity w3-text-white">
-    <img class="bgimg" src="{% static 'images/forestbridge.jpg' %}">
-  <div class="w3-display-topleft w3-padding-large w3-xlarge">
-    Logo
-  </div>
-  <div class="w3-display-middle">
-    <h1 class="w3-jumbo w3-animate-top">COMING SOON</h1>
-    <hr class="w3-border-grey" style="margin:auto;width:40%">
-    <p class="w3-large w3-center">35 days left</p>
-  </div>
-  <div class="w3-display-bottomleft w3-padding-large">
-    Powered by <a href="https://www.w3schools.com/w3css/default.asp" target="_blank">w3.css</a>
-  </div>
+<!-- Navigation Bar -->
+<div class="w3-bar w3-white w3-border-bottom w3-large">
+    <div class="left-menu">
+        <a href="#" class="w3-bar-item w3-button w3-text-red w3-hover-red"><b><i
+                class="fa fa-map-marker w3-margin-right"></i>Logo</b></a>
+        <a href="{% url 'home' %}" class="w3-bar-item w3-button w3-mobile">Home</a>
+        <a href="{% url 'searchProperty' %}" class="w3-bar-item w3-button w3-mobile">Search Property</a>
+        <a href="{% url 'advertiseProperty' %}" class="w3-bar-item w3-button w3-mobile">Advertise Property</a>
+        <a href="{% url 'contact' %}" class="w3-bar-item w3-button w3-mobile">Contact Us</a>
+        <a href="{% url 'aboutus' %}" class="w3-bar-item w3-button w3-mobile">About</a>
+    </div>
+    <div class="right-menu">
+        <a href="{% url 'signin' %}" class="w3-bar-item w3-button w3-light-grey w3-mobile">SignIn/Register</a>
+    </div>
 </div>
+<!-- Page content -->
+<div id="main-container">
+
+    <!-- Explore Nature -->
+    <div>
+        <div class="w3-display-middle">
+        <h1 class="w3-jumbo w3-animate-top">COMING SOON</h1>
+        </div>
+    </div>
+
+    <!-- End page content -->
+</div>
+
+<!-- Footer -->
+<footer class="w3-container w3-center w3-opacity w3-margin-bottom">
+    <h5>Find Us On</h5>
+    <div class="w3-xlarge w3-padding-16">
+        <i class="fa fa-facebook-official w3-hover-opacity"></i>
+        <i class="fa fa-instagram w3-hover-opacity"></i>
+        <i class="fa fa-snapchat w3-hover-opacity"></i>
+        <i class="fa fa-pinterest-p w3-hover-opacity"></i>
+        <i class="fa fa-twitter w3-hover-opacity"></i>
+        <i class="fa fa-linkedin w3-hover-opacity"></i>
+    </div>
+    </p>
+</footer>
 
 </body>
 </html>
