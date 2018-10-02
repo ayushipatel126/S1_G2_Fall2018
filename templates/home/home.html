@@ -1,6 +1,6 @@
 <!DOCTYPE html>
 <html>
-<title>W3.CSS Template</title>
+<title>Realty Trader</title>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
 {% load  static %}
@@ -22,13 +22,16 @@
 <!-- Navigation Bar -->
 <div class="w3-bar w3-white w3-border-bottom w3-large">
     <div class="left-menu">
+
         <a href="#" class="w3-bar-item w3-button w3-text-red w3-hover-red"><b><i
                 class="fa fa-map-marker w3-margin-right"></i>Logo</b></a>
+        <div>
+        <img class="w3-image" src="{% static 'images/Logo.jpeg' %}" alt="London" ></div>
         <a href="{% url 'home' %}" class="w3-bar-item w3-button w3-mobile">Home</a>
         <a href="{% url 'searchProperty' %}" class="w3-bar-item w3-button w3-mobile">Search Property</a>
         <a href="{% url 'advertiseProperty' %}" class="w3-bar-item w3-button w3-mobile">Advertise Property</a>
         <a href="{% url 'contact' %}" class="w3-bar-item w3-button w3-mobile">Contact Us</a>
-        <a href="{% url 'aboutus' %}" class="w3-bar-item w3-button w3-mobile">About</a>
+        <a href="{% url 'aboutus' %}" class="w3-bar-item w3-button w3-mobile">About Us</a>
     </div>
     <div class="right-menu">
         <a href="{% url 'signin' %}" class="w3-bar-item w3-button w3-light-grey w3-mobile">SignIn/Register</a>
@@ -37,72 +40,56 @@
 
 <!-- Header -->
 <header class="w3-display-container w3-content w3-hide-small" style="max-width:1500px">
-    <img class="w3-image" src="{% static 'images/london2.jpg' %}" alt="London" width="1500" height="700">
+
+    <img class="w3-image" src="{% static 'images/b1.jpg' %}" alt="London" width="1500" height="700">
 </header>
 
 <!-- Page content -->
-<div class="w3-content" style="max-width:1100px;">
+<div class="w3-content content" style="max-width:1100px;">
 
     <!-- Explore Nature -->
-    <div class="w3-container">
-        <h3> Important Properties</h3>
+    <div class="w3-container heading-color">
+        <h2> Trending Properties</h2>
     </div>
     <div class="w3-row-padding">
         <div class="w3-quarter w3-margin-bottom">
-            <img class="w3-image" src="{% static 'images/1.jpg' %}">
+            <img class="w3-image" src="{% static 'images/p1.jpg' %}">
             <button type="button" value="">More Details</button>
         </div>
         <div class="w3-quarter w3-margin-bottom">
-            <img class="w3-image" src="{% static 'images/1.jpg' %}">
+            <img class="w3-image" src="{% static 'images/p2.jpg' %}">
             <button type="button" value="">More Details</button>
         </div>
         <div class="w3-quarter w3-margin-bottom">
-            <img class="w3-image" src="{% static 'images/1.jpg' %}">
+            <img class="w3-image" src="{% static 'images/p3.jpg' %}">
             <button type="button" value="">More Details</button>
         </div>
         <div class="w3-quarter w3-margin-bottom">
-            <img class="w3-image" src="{% static 'images/1.jpg' %}">
+            <img class="w3-image" src="{% static 'images/p4.jpg' %}">
             <button type="button" value="">More Details</button>
         </div>
     </div>
 
     <div class="w3-row-padding">
         <div class="w3-quarter w3-margin-bottom">
-            <img class="w3-image" src="{% static 'images/1.jpg' %}">
+            <img class="w3-image" src="{% static 'images/p5.jpg' %}">
             <button type="button" value="">More Details</button>
         </div>
         <div class="w3-quarter w3-margin-bottom">
-            <img class="w3-image" src="{% static 'images/1.jpg' %}">
+            <img class="w3-image" src="{% static 'images/p6.jpg' %}">
             <button type="button" value="">More Details</button>
         </div>
         <div class="w3-quarter w3-margin-bottom">
-            <img class="w3-image" src="{% static 'images/1.jpg' %}">
+            <img class="w3-image" src="{% static 'images/p7.jpg' %}">
             <button type="button" value="">More Details</button>
         </div>
         <div class="w3-quarter w3-margin-bottom">
-            <img class="w3-image" src="{% static 'images/1.jpg' %}">
+            <img class="w3-image" src="{% static 'images/p8.jpg' %}">
             <button type="button" value="">More Details</button>
         </div>
     </div>
 
-    <div class="w3-row-padding">
-        <div class="w3-quarter w3-margin-bottom">
-            <img class="w3-image" src="{% static 'images/1.jpg' %}">
-            <button type="button" value="">More Details</button>
-        </div>
-        <div class="w3-quarter w3-margin-bottom">
-            <img class="w3-image" src="{% static 'images/1.jpg' %}">
-            <button type="button" value="">More Details</button>
-        </div>
-        <div class="w3-quarter w3-margin-bottom">
-            <img class="w3-image" src="{% static 'images/1.jpg' %}">
-            <button type="button" value="">More Details</button>
-        </div>
-        <div class="w3-quarter w3-margin-bottom">
-            <img class="w3-image" src="{% static 'images/1.jpg' %}">
-            <button type="button" value="">More Details</button>
-        </div>
-    </div>
+
 
     <!-- End page content -->
 </div>
