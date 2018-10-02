@@ -40,8 +40,74 @@
 
 <!-- Header -->
 <header class="w3-display-container w3-content w3-hide-small" style="max-width:1500px">
+<<<<<<< HEAD
 
     <img class="w3-image" src="{% static 'images/b1.jpg' %}" alt="London" width="1500" height="700">
+=======
+    <img class="w3-image" src="{% static 'images/london2.jpg' %}" alt="London" width="1500" height="700">
+    <div class="w3-display-middle" style="width:50%">
+        <div class="w3-bar w3-black">
+            <button class="w3-bar-item w3-button tablink" onclick="openLink(event, 'Buy');"><i
+                    class="fa fa-building-o w3-margin-right"></i>Buy
+            </button>
+            <button class="w3-bar-item w3-button tablink" onclick="openLink(event, 'Sell');"><i
+                    class="fa fa-building w3-margin-right"></i>Sell
+            </button>
+            <button class="w3-bar-item w3-button tablink" onclick="openLink(event, 'Rental');"><i
+                    class="fa fa-home w3-margin-right"></i>Rental
+            </button>
+        </div>
+        {% block content %}
+        {% endblock %}
+        <!-- Tabs -->
+        <div id="Buy" class="w3-container w3-white w3-padding-16 myLink">
+            <h3>Smart Property Search</h3>
+            <p>Buy a property with us at affordable prices</p>
+            <div class="w3-row-padding" style="margin:0 -16px;">
+                <div class="w3-col">
+                    <div class="s12">
+                        <label>From</label>
+                        <input class="w3-input w3-border" type="text" placeholder="Enter address">
+                    </div>
+                </div>
+            </div>
+            <p>
+                <button class="w3-button w3-dark-grey">Search</button>
+            </p>
+        </div>
+        <div id="Sell" class="w3-container w3-white w3-padding-16 myLink">
+            <h3>Smart Property Search</h3>
+            <p>Sell a property with us and get the best prices</p>
+            <div class="w3-row-padding" style="margin:0 -16px;">
+                <div class="w3-col">
+                    <div class="s12">
+                        <label>From</label>
+                        <input class="w3-input w3-border" type="text" placeholder="Enter address">
+                    </div>
+                </div>
+            </div>
+            <p>
+                <button class="w3-button w3-dark-grey">Search</button>
+            </p>
+        </div>
+        <div id="Rental" class="w3-container w3-white w3-padding-16 myLink">
+            <h3>Best Property Rental</h3>
+            <p>Get 10% discount with us</p>
+            <div class="w3-row-padding" style="margin:0 -16px;">
+                <div class="w3-col">
+                    <div class="s12">
+                        <label>From</label>
+                        <input class="w3-input w3-border" type="text" placeholder="Enter address">
+                    </div>
+                </div>
+            </div>
+            <p>
+                <button class="w3-button w3-dark-grey">Search Availability</button>
+            </p>
+        </div>
+
+    </div>
+>>>>>>> 788e7a0dde58eea274cb32bba75b03596c3a4256
 </header>
 
 <!-- Page content -->
