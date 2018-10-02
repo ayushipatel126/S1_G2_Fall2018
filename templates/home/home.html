@@ -25,118 +25,146 @@
         <a href="#" class="w3-bar-item w3-button w3-text-red w3-hover-red"><b><i
                 class="fa fa-map-marker w3-margin-right"></i>Logo</b></a>
         <a href="{% url 'home' %}" class="w3-bar-item w3-button w3-mobile">Home</a>
-        <a href="#about" class="w3-bar-item w3-button w3-mobile">About</a>
-        <a href="{% url 'contact' %}" class="w3-bar-item w3-button w3-mobile">Contact</a>
-    </div>
-    <div>
-        <div class="center-menu">
-            <input class="w3-input w3-border" type="text" placeholder="Search Property">
-        </div>
-        <div style="float: left;border: 1px solid #ccc!important;">
-            <a href="{% url 'searchProperty' %}" class="w3-bar-item w3-button w3-right w3-hover-red w3-text-grey"><i
-                    class="fa fa-search"></i></a>
-        </div>
+        <a href="{% url 'searchProperty' %}" class="w3-bar-item w3-button w3-mobile">Search Property</a>
+        <a href="{% url 'advertiseProperty' %}" class="w3-bar-item w3-button w3-mobile">Advertise Property</a>
+        <a href="{% url 'contact' %}" class="w3-bar-item w3-button w3-mobile">Contact Us</a>
+        <a href="{% url 'aboutus' %}" class="w3-bar-item w3-button w3-mobile">About</a>
     </div>
     <div class="right-menu">
         <a href="{% url 'signin' %}" class="w3-bar-item w3-button w3-light-grey w3-mobile">SignIn/Register</a>
-        <a href="#contact" class="w3-bar-item w3-button w3-light-grey w3-mobile">Advertise Property</a>
-
     </div>
-
 </div>
 
 <!-- Header -->
 <header class="w3-display-container w3-content w3-hide-small" style="max-width:1500px">
     <img class="w3-image" src="{% static 'images/london2.jpg' %}" alt="London" width="1500" height="700">
-    <div class="w3-display-middle" style="width:65%">
+    <div class="w3-display-middle" style="width:50%">
         <div class="w3-bar w3-black">
-            <button class="w3-bar-item w3-button tablink" onclick="openLink(event, 'Flight');"><i
-                    class="fa fa-plane w3-margin-right"></i>Buy
+            <button class="w3-bar-item w3-button tablink" onclick="openLink(event, 'Buy');"><i
+                    class="fa fa-building-o w3-margin-right"></i>Buy
             </button>
-            <button class="w3-bar-item w3-button tablink" onclick="openLink(event, 'Hotel');"><i
-                    class="fa fa-bed w3-margin-right"></i>Sell
+            <button class="w3-bar-item w3-button tablink" onclick="openLink(event, 'Sell');"><i
+                    class="fa fa-building w3-margin-right"></i>Sell
             </button>
-            <button class="w3-bar-item w3-button tablink" onclick="openLink(event, 'Car');"><i
-                    class="fa fa-car w3-margin-right"></i>Rental
+            <button class="w3-bar-item w3-button tablink" onclick="openLink(event, 'Rental');"><i
+                    class="fa fa-home w3-margin-right"></i>Rental
             </button>
         </div>
-{% block content %}
-{% endblock %}
+        {% block content %}
+        {% endblock %}
         <!-- Tabs -->
-        <div id="Flight" class="w3-container w3-white w3-padding-16 myLink">
-            <h3>Travel the world with us</h3>
+        <div id="Buy" class="w3-container w3-white w3-padding-16 myLink">
+            <h3>Smart Property Search</h3>
+            <p>Buy a property with us at affordable prices</p>
             <div class="w3-row-padding" style="margin:0 -16px;">
-                <div class="w3-half">
-                    <label>From</label>
-                    <input class="w3-input w3-border" type="text" placeholder="Departing from">
-                </div>
-                <div class="w3-half">
-                    <label>To</label>
-                    <input class="w3-input w3-border" type="text" placeholder="Arriving at">
+                <div class="w3-col">
+                    <div class="s12">
+                        <label>From</label>
+                        <input class="w3-input w3-border" type="text" placeholder="Enter address">
+                    </div>
                 </div>
             </div>
             <p>
-                <button class="w3-button w3-dark-grey">Search and find dates</button>
+                <button class="w3-button w3-dark-grey">Search</button>
             </p>
         </div>
-
-        <div id="Hotel" class="w3-container w3-white w3-padding-16 myLink">
-            <h3>Find the best hotels</h3>
-            <p>Book a hotel with us and get the best fares and promotions.</p>
-            <p>We know hotels - we know comfort.</p>
+        <div id="Sell" class="w3-container w3-white w3-padding-16 myLink">
+            <h3>Smart Property Search</h3>
+            <p>Sell a property with us and get the best prices</p>
+            <div class="w3-row-padding" style="margin:0 -16px;">
+                <div class="w3-col">
+                    <div class="s12">
+                        <label>From</label>
+                        <input class="w3-input w3-border" type="text" placeholder="Enter address">
+                    </div>
+                </div>
+            </div>
             <p>
-                <button class="w3-button w3-dark-grey">Search Hotels</button>
+                <button class="w3-button w3-dark-grey">Search</button>
             </p>
         </div>
-
-        <div id="Car" class="w3-container w3-white w3-padding-16 myLink">
-            <h3>Best car rental in the world!</h3>
-            <p><span class="w3-tag w3-deep-orange">DISCOUNT!</span> Special offer if you book today: 25% off anywhere in
-                the world with CarServiceRentalRUs</p>
-            <input class="w3-input w3-border" type="text" placeholder="Pick-up point">
+        <div id="Rental" class="w3-container w3-white w3-padding-16 myLink">
+            <h3>Best Property Rental</h3>
+            <p>Get 10% discount with us</p>
+            <div class="w3-row-padding" style="margin:0 -16px;">
+                <div class="w3-col">
+                    <div class="s12">
+                        <label>From</label>
+                        <input class="w3-input w3-border" type="text" placeholder="Enter address">
+                    </div>
+                </div>
+            </div>
             <p>
                 <button class="w3-button w3-dark-grey">Search Availability</button>
             </p>
         </div>
+
     </div>
 </header>
 
 <!-- Page content -->
 <div class="w3-content" style="max-width:1100px;">
 
-
     <!-- Explore Nature -->
     <div class="w3-container">
-        <h3>Explore Nature</h3>
-        <p>Travel with us and see nature at its finest.</p>
+        <h3> Important Properties</h3>
     </div>
     <div class="w3-row-padding">
         <div class="w3-quarter w3-margin-bottom">
             <img class="w3-image" src="{% static 'images/1.jpg' %}">
+            <button type="button" value="">More Details</button>
         </div>
         <div class="w3-quarter w3-margin-bottom">
             <img class="w3-image" src="{% static 'images/1.jpg' %}">
+            <button type="button" value="">More Details</button>
         </div>
         <div class="w3-quarter w3-margin-bottom">
             <img class="w3-image" src="{% static 'images/1.jpg' %}">
+            <button type="button" value="">More Details</button>
         </div>
         <div class="w3-quarter w3-margin-bottom">
             <img class="w3-image" src="{% static 'images/1.jpg' %}">
-        </div>
-
-    </div>
-
-    <!-- Newsletter -->
-    <div class="w3-container">
-        <div class="w3-panel w3-padding-16 w3-black w3-opacity w3-card w3-hover-opacity-off">
-            <h2>Get the best offers first!</h2>
-            <p>Join our newsletter.</p>
-            <label>E-mail</label>
-            <input class="w3-input w3-border" type="text" placeholder="Your Email address">
-            <button type="button" class="w3-button w3-red w3-margin-top">Subscribe</button>
+            <button type="button" value="">More Details</button>
         </div>
     </div>
 
+    <div class="w3-row-padding">
+        <div class="w3-quarter w3-margin-bottom">
+            <img class="w3-image" src="{% static 'images/1.jpg' %}">
+            <button type="button" value="">More Details</button>
+        </div>
+        <div class="w3-quarter w3-margin-bottom">
+            <img class="w3-image" src="{% static 'images/1.jpg' %}">
+            <button type="button" value="">More Details</button>
+        </div>
+        <div class="w3-quarter w3-margin-bottom">
+            <img class="w3-image" src="{% static 'images/1.jpg' %}">
+            <button type="button" value="">More Details</button>
+        </div>
+        <div class="w3-quarter w3-margin-bottom">
+            <img class="w3-image" src="{% static 'images/1.jpg' %}">
+            <button type="button" value="">More Details</button>
+        </div>
+    </div>
+
+    <div class="w3-row-padding">
+        <div class="w3-quarter w3-margin-bottom">
+            <img class="w3-image" src="{% static 'images/1.jpg' %}">
+            <button type="button" value="">More Details</button>
+        </div>
+        <div class="w3-quarter w3-margin-bottom">
+            <img class="w3-image" src="{% static 'images/1.jpg' %}">
+            <button type="button" value="">More Details</button>
+        </div>
+        <div class="w3-quarter w3-margin-bottom">
+            <img class="w3-image" src="{% static 'images/1.jpg' %}">
+            <button type="button" value="">More Details</button>
+        </div>
+        <div class="w3-quarter w3-margin-bottom">
+            <img class="w3-image" src="{% static 'images/1.jpg' %}">
+            <button type="button" value="">More Details</button>
+        </div>
+    </div>
 
     <!-- End page content -->
 </div>
@@ -152,7 +180,6 @@
         <i class="fa fa-twitter w3-hover-opacity"></i>
         <i class="fa fa-linkedin w3-hover-opacity"></i>
     </div>
-    <p>Powered by <a href="https://www.w3schools.com/w3css/default.asp" target="_blank" class="w3-hover-text-green">w3.css</a>
     </p>
 </footer>
 
